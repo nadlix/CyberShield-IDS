@@ -1,0 +1,63 @@
+{
+  "sql_injection": {
+    "name": "SQL Injection",
+    "description": "Attempts to inject SQL commands",
+    "patterns": [
+      "union",
+      "select",
+      "insert",
+      "delete",
+      "drop",
+      "exec",
+      "or 1=1",
+      "exec xp_"
+    ]
+  },
+  "xss_attack": {
+    "name": "Cross-Site Scripting (XSS)",
+    "description": "Attempts to inject malicious scripts",
+    "patterns": [
+      "<script",
+      "javascript:",
+      "onerror=",
+      "onload=",
+      "onclick="
+    ]
+  },
+  "port_scan": {
+    "name": "Port Scanning",
+    "description": "Reconnaissance activity scanning for open ports",
+    "indicators": [
+      "syn_fin_flags",
+      "rapid_port_changes",
+      "xmas_scan"
+    ]
+  },
+  "ddos_attack": {
+    "name": "Distributed Denial of Service",
+    "description": "Flooding attack from multiple sources",
+    "indicators": [
+      "high_packet_rate",
+      "high_bandwidth",
+      "many_sources"
+    ]
+  },
+  "brute_force": {
+    "name": "Brute Force Attack",
+    "description": "Repeated authentication attempts",
+    "indicators": [
+      "failed_auth_attempts",
+      "rapid_connections",
+      "ssh_port_22"
+    ]
+  },
+  "malware": {
+    "name": "Malware Detection",
+    "description": "Attempts to detect known malware signatures",
+    "signatures": [
+      "emotet",
+      "trickbot",
+      "wannacry"
+    ]
+  }
+}
